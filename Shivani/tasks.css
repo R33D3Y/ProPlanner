@@ -1,0 +1,91 @@
+html{
+   /* background-image: url("col.jpg") ; */
+   /* no-repeat center center fixed; */
+
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color:#31bca7;
+  background-size:100% 100%;
+  background-repeat: no-repeat;
+
+  overflow-y: scroll;
+}
+
+h2{
+/* background-color: white; */
+background: linear-gradient(to right,orange, white);
+  min-height: 100px;
+  text-align: center;
+  text-align: center;
+  border-style: solid;
+  border-color: orange;
+  border-width: 16px;
+}
+
+.content{
+  /* padding-top: 80px;
+  padding-left:180px;
+  padding-right:180px; */
+
+  margin:112px;
+  /* background-color: red; */
+}
+body {
+       font-family: 'Amiko';font-size: 22px;
+
+}
+
+.list {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .list:hover {
+    background-color: #ccc;
+
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+
+}
+
+#list1,#list2,#list3{
+
+
+  text-align: center;
+  border-style: solid;
+  border-width: 16px;
+  font-weight: bold;
+  font-family: 'Amiko';font-size: 28px;
+}
+
+#list1{
+  background: linear-gradient(to left,#1fbed6, white);
+
+  border-color: #1fbed6;
+}
+
+#list2{
+  background: linear-gradient(to left,#97c30a, white);
+  border-color: #97c30a;
+}
+
+#list3{
+    background: linear-gradient(to left,#ff717e, white);
+  border-color: #ff717e;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="tasks.css">
+<link href='https://fonts.googleapis.com/css?family=Amiko' rel='stylesheet'>
+</head>
+<body>
+
+<div class="content">
+  <h2>Lists</h2>
+<button class="list" id="list1">Shopping</button>
+<div class="panel">
+    <p>Carrots</p>
+    <p>Chicken</p>
+    <p>Fish</p>
+</div>
+<button class="list" id="list2">Uni</button>
+<div class="panel">
+  <p>Lecture 1</p>
+  <p>Lecture 1</p>
+</div>
+<button class="list" id="list3">Work</button>
+  <div class="panel">
+      <p>Carrots</p>
+      <p>Chicken</p>
+      <p>Fish</p>
+</div>
+</div>
+<script>
+var acc = document.getElementsByClassName("list");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+</script>
+
+</body>
+</html>
