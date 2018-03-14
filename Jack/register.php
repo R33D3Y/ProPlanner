@@ -11,9 +11,9 @@ session_start();
 $_SESSION["username"] = $username;
 $_SESSION["password"] = $password;
 
-$servername = "";
-$serverUsername = "";
-$serverPassword = "";
+$servername = "localhost";
+$serverUsername = "root";
+$serverPassword = "myserver2708";
 
 $connection = new mysqli($servername, $serverUsername, $serverPassword);
 // Check connection

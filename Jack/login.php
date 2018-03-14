@@ -3,9 +3,9 @@
 $username = $_POST["username"];
 $password = $_POST["password"];
 
-$servername = "";
-$serverUsername = "";
-$serverPassword = "";
+$servername = "localhost";
+$serverUsername = "root";
+$serverPassword = "myserver2708";
 
 $connection = new mysqli($servername, $serverUsername, $serverPassword);
 // Check connection

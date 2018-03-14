@@ -1,0 +1,31 @@
+.container {
+	margin: 10px;
+}
+
+.list {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+
+#list0,#list1,#list2,#list3,#list4 {
+  text-align: center;
+  border-style: solid;
+  font-weight: bold;
+  font-family: 'Amiko';font-size: 28px;
+  color: white;
+}

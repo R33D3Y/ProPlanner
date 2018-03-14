@@ -3,9 +3,9 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-$servername = "";
-$serverUsername = "";
-$serverPassword = "";
+$servername = "localhost";
+$serverUsername = "root";
+$serverPassword = "myserver2708";
 
 $connection = new mysqli($servername, $serverUsername, $serverPassword);
 // Check connection
@@ -212,11 +212,24 @@ function logout()
 	header('Location: /Programming/MySQL/index.html');
 }
 
+function listBorder($colour)
+{
+	return "border-style: solid; border-top-style: none;border-color: ".$colour.";";
+}
+
+function listBorderFade($colour)
+{
+	return "border-color: ".$colour.";background: linear-gradient(to left,".$colour.", white);";
+}
+
 ?>
 
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="tasks.css">
+		<link href='https://fonts.googleapis.com/css?family=Amiko' rel='stylesheet'>
 		<title>Your Tasks</title>
 
 		<script type="text/javascript">
@@ -224,7 +237,8 @@ function logout()
 			window.onload = function()
 			{
 				hideElements();
-			}
+				hideLists();
+			};
 
 			function hideElements()
 			{
@@ -232,8 +246,24 @@ function logout()
 
 				do 
 				{
-					document.getElementById('divDate' + count).style.display = 'none';
-					document.getElementById('divTime' + count).style.display = 'none';
+					if (document.getElementById('divDate' + count) != null && document.getElementById('divTime' + count) != null)
+					{
+						document.getElementById('divDate' + count).style.display = 'none';
+						document.getElementById('divTime' + count).style.display = 'none';
+					}
+				} while (count++ <= 5);
+			}
+
+			function hideLists()
+			{
+				var count = 0;
+
+				do 
+				{
+					if (document.getElementById('panel' + count) != null)
+					{
+						//document.getElementById('panel' + count).style.display = 'block';
+					}
 				} while (count++ <= 5);
 			}
 
@@ -262,6 +292,27 @@ function logout()
 					}
 				} while(count++ <= 5);
 			}
+
+			function clickLists(elem)
+			{
+				var count = 0;
+
+				do
+				{
+					if (elem.value == ("list" + count))
+					{
+				        if (document.getElementById('panel' + count).style.display == 'block')
+				        {
+				            document.getElementById('panel' + count).style.display = 'none';
+				        }
+
+				        else
+				        {
+				            document.getElementById('panel' + count).style.display = 'block';
+				        }
+			    	}
+				} while(count++ <= 5);
+			}
 		</script>
 	</head>
 
@@ -287,16 +338,22 @@ function displayLists($connection, $username)
 {
 	$sql = "SELECT id, name, colour, category FROM lists WHERE username = '$username'";
 	$result = $connection->query($sql);
+
+	echo "<div class='container'>";
 	
 	if ($result->num_rows > 0)
 	{
+		$count = 0;
+
 		while ($result1 = $result->fetch_assoc())
 		{
+			echo "<button class='list' id='list".$count."' style='".listBorderFade($result1['colour'])."' onclick='clickLists(this)' value='list".$count."'>".$result1['name']." ".$result1['category']."</button>";
 			echo "<form action='mainFile.php' method='post'>";
-			echo "<fieldset style='border-color: ".$result1['colour']."'><legend>".$result1['name']." ".$result1['category']."</legend>";
+			echo "<div id='panel".$count."' class='panel' style='".listBorder($result1['colour'])."'>";
 		    displayTasks($connection, $result1['id']);
-		    echo "</fieldset>";
+		    echo "</div>";
 		    echo "</form><br>";
+		    $count++;
 		}
 	}
 
@@ -333,6 +390,8 @@ function displayLists($connection, $username)
 		echo "<input type='submit' name='addList' value='Add List'>";
 		echo "</form>";
 	}
+
+    echo "</div>";
 }
 
 function getListID($connection, $username, $name)
