@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+		<html>
+			<head>
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+				<link rel="stylesheet" type="text/css" href="tasks.css">
+				<link href='https://fonts.googleapis.com/css?family=Amiko' rel='stylesheet'>
+				<link rel='stylesheet' href='style.css' />
+				<link rel='stylesheet' href='js/spectrum.css' />
+				<title>Your Tasks</title>
+				<script type="text/javascript" src="js/jquery.js"></script>
+				<script type="text/javascript" src="js/spectrum.js"></script>
+				<script type="text/javascript" src="javascript.js"></script>
+				</head>
+
+			<body>
+				<form style="text-align: right" action="" method="post">
+					<p> Points: 10</p>
+					<input type="submit" name="logout" value="Log Out">
+				</form>
+				<br>
+				<button class='list' id='list1' style='
+					border-color: rgb(238, 12, 12);
+					background: linear-gradient(to left,rgb(238, 12, 12), white)' onclick='' value='list'>
+					Shopping List
+				</button>
+					<div id='panel1' class='panel' style='
+						border-style: solid; border-top-style: none;border-color: rgb(238, 12, 12)'>
+						<br>
+					    <form action='' method='post'>
+					    	<table style='width:100%'>
+					    		<tr>
+						    		<td style='width:40%'>Apples</td>
+						    		<td style='text-align:center'></td>
+						    		<td style='text-align:center'>Completed</td>
+						    		<td style='text-align:right'>
+						    			<input type='submit' name='' value='State'>
+					   					<input type='submit' name='removeTask' value='X'>
+						    	</tr>
+						    	<tr>
+						    		<td style='width:40%'>Oranges</td>
+						    		<td style='text-align:center'>01:30</td>
+						    		<td style='text-align:center'>Incompleted</td>
+						    		<td style='text-align:right'>
+						    			<input type='submit' name='' value='State'>
+					   					<input type='submit' name='removeTask' value='X'>
+					   				</td>
+					    		</tr>
+							</table>
+						</form>
+						<br>Task:<br>
+						<input type='text' name='content'>
+						<button onclick='' value="">X</button><br>
+						<input type='hidden' name='listID' value=''>
+
+						Type:<br>
+						<select name='type' onchange=''>
+						<option value='tick'>Tick</option>
+						<option value='timer'>Timer</option>
+						<option value='deadline'>Deadline</option>
+						</select><br>
+
+						<div id='divDate'>Date:<br>
+						<input type='date' name='taskDate' min=''><br></div>
+
+						<div id='divTime'>Time:<br>
+						<input type='time' name='taskTime'><br></div>
+
+						<table style='width:31%'><tr>
+						<td style='width:16%'><input type='submit' name='addTask' value='Add Task'></td>
+						<td style='width:15%'><input type='submit' name='removeList' value='Remove List'></td>
+						</tr></table>
+					</div>
+					<br>
+					<form action='' method='post'>
+
+						List Name:<br>
+						<input type='text' name='name' required='true'><br>
+
+						List Colour:<br>
+						<input type='text' name='colour' id='spec' required='true'><br>
+
+						List Category:<br>
+						<select name='category'>
+						<option value='\u{1F6B2}'>Sport</option>
+						<option value='\u{26F5}'>Sea Side</option>
+						<option value='\u{26FD}'>Car</option>
+						<option value='\u{1F339}'>Garden</option>
+						<option value='\u{1F382}'>Birthday</option>
+						<option value='\u{1F393}'>Education</option>
+						<option value='\u{1F4B3}'>Shopping</option>
+						</select><br><br>
+						<input type='submit' name='addList' value='Add List'>
+					</form>
+			</body>
+		</html>
