@@ -1,0 +1,144 @@
+.container-fluid{
+    height: 100vh;
+    width: 100vw;
+    background: #16a085;
+    background: linear-gradient(rgba(22, 160, 133, 0.7), rgba(0, 0, 0, 0.5)), url(./images/bg.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
+
+.container-fluid .page2 {
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    background-size: cover;
+}
+
+.container-fluid .landing .content {
+    width: 50%;
+    float: left;
+    border-bottom: 0;
+    padding-top: 230px; 
+}
+
+.container-fluid .landing .content h1 {
+      font-size: 60px;
+      font-weight: 500;
+      line-height: 60px; 
+      color: #fff; 
+}
+
+.container-fluid .landing .content p {
+      color: #fff; 
+}
+
+.sect {
+  padding: 100px;
+  border-bottom: 1px solid #eaeaea; 
+}
+
+.btn{
+  font-size: 20px;
+  margin-top: 15px;
+  border-radius: 3px;
+  background: #fff;
+  color: rgb(22, 160, 133); 
+  letter-spacing: 1px;
+   
+}
+
+input[type="text"], input[type="password"],input[type='username'], input[type='firstname'], input[type='lastname'], input[type='email'] {
+      
+  align-items: left;
+  padding-top: 5px;
+  background-color: transparent;
+  border: 0;
+  border-bottom: solid 1px rgb(22, 160, 133);
+  width: 60%;
+  padding-bottom: 4px;
+  color: black !important;
+  font-weight: lighter;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  font-size: 15px;
+}
+
+select {
+  padding-top: 30px;
+  border: 0;
+  padding: 8px 20px;
+  margin: 0 2px;
+  border-radius: 5px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgb(22, 160, 133);
+  color: #fff;
+  opacity: 0.8;
+  transition: 0.4s;
+}
+select:hover {
+	background-color: rgb(22, 160, 133);
+    opacity:1;
+}
+
+input[type="text"], input[type="password"],input[type='username'], input[type='firstname'], input[type='lastname'], input[type='email']  { 
+    outline: none;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #2c3e50 inset;
+    -webkit-text-fill-color: #fff !important;
+}
+
+input[type ='submit']{
+  padding-top: 30px;
+  border: 0;
+  padding: 8px 20px;
+  margin: 0 2px;
+  border-radius: 5px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgb(22, 160, 133);
+  color: #fff;
+  box-shadow: 0 4px rgb(120,120,120);
+  opacity: 0.8;
+  transition: 0.4s;
+}
+input[type ='submit']:hover {
+	background-color: rgb(22, 160, 133);
+    opacity:1;
+    
+ }
+
+input[type ='submit']:active {
+  background-color: rgb(22, 160, 133);
+  box-shadow: 0 1px #666;
+  transform: translateY(4px);
+}
+legend{
+  text-decoration: underline;
+  align-items: left;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  font-size: 20px;
+  color:rgb(120, 120, 120);
+
+}
+
+fieldset{
+  margin-left: 100px;
+  padding-top: 30px;
+  color:rgb(120, 120, 120);
+
+}
+
+.row{
+  padding-left: 10%;
+  padding-top: 5%;
+}
