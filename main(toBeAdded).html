@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+		<html>
+			<head>
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+				<link rel="stylesheet" type="text/css" href="tasks.css">
+				<link href='https://fonts.googleapis.com/css?family=Amiko' rel='stylesheet'>
+				<link rel='stylesheet' href='style.css' />
+				<link rel='stylesheet' href='js/spectrum.css' />
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+				<title>Your Tasks</title>
+				<script type="text/javascript" src="js/jquery.js"></script>
+				<script type="text/javascript" src="js/spectrum.js"></script>
+				<script type="text/javascript" src="javascript.js"></script>
+				</head>
+
+			<body>
+                <div class="page2">
+                    <div class= "col">
+                <div class="top">
+                    <form action="" method="post">
+                        <p> Points: 10</p>
+                        <input type="submit" name="logout" value="Log Out">
+                    </form>
+                </div>
+				<br>
+                <div class='listButton'>
+				<button class='list' id='list1' onclick='' value='list'>
+					Shopping List
+				</button>
+                </div>
+					<div id='panel1' class='panel'>
+						<br>
+					    <form action='' method='post'>
+					    	<table style='width:100%'>
+					    		<tr>
+						    		<td style='width:40%'>Apples</td>
+						    		<td style='text-align:center'></td>
+						    		<td style='text-align:center'>Completed</td>
+						    		<td style='text-align:right'>
+						    			<input type='submit' name='' value='State'>
+					   					<input type='submit' name='removeTask' value='X'>
+						    	</tr>
+						    	<tr>
+						    		<td style='width:40%'>Oranges</td>
+						    		<td style='text-align:center'>01:30</td>
+						    		<td style='text-align:center'>Incompleted</td>
+						    		<td style='text-align:right'>
+						    			<input type='submit' name='' value='State'>
+					   					<input type='submit' name='removeTask' value='X'>
+					   				</td>
+					    		</tr>
+							</table>
+						</form>
+                        <div class='task'>
+						<br>Task:<br>
+						<input type='text' name='content'>
+						<button onclick='' value="" >X</button><br>
+						<input type='hidden' name='listID' value=''>
+                        </div>
+						Type:<br>
+						<select name='type' onchange=''>
+						<option value='tick'>Tick</option>
+						<option value='timer'>Timer</option>
+						<option value='deadline'>Deadline</option>
+						</select><br>
+
+						<div id='divDate'>Date:<br>
+						<input type='date' name='taskDate' min=''><br></div>
+
+						<div id='divTime'>Time:<br>
+						<input type='time' name='taskTime'><br></div>
+
+						<table style='width:31%'><tr>
+						<td style='width:16%'><input type='submit' name='addTask' value='Add Task'></td>
+						<td style='width:15%'><input type='submit' name='removeList' value='Remove List'></td>
+						</tr></table>
+					</div>
+					<br>
+                        <div class='newList'>
+					<form action='' method='post'>
+
+						List Name:<br>
+						<input type='text' name='name' required='true'><br>
+                        <div class='color'>
+                            List Colour:<br>
+                            <input type='text' name='colour' id='spec' required='true'><br>
+                        </div>
+                        <div class= 'category'>
+                            List Category:<br>
+                            <select name='category'>
+                            <option value='\u{1F6B2}'>Sport</option>
+                            <option value='\u{26F5}'>Sea Side</option>
+                            <option value='\u{26FD}'>Car</option>
+                            <option value='\u{1F339}'>Garden</option>
+                            <option value='\u{1F382}'>Birthday</option>
+                            <option value='\u{1F393}'>Education</option>
+                            <option value='\u{1F4B3}'>Shopping</option>
+                            </select><br>
+                        </div>
+						<input type='submit' name='addList' value='Add List'>
+					</form>
+                    </div>
+                </div>
+                </div>
+			</body>
+		</html>
